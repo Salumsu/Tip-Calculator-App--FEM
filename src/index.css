@@ -1,0 +1,240 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Space Mono", monospace;
+}
+
+.title {
+  color: hsl(186, 14%, 43%);
+  letter-spacing: 5px;
+  font-size: 20px;
+  position: absolute;
+  top: 150px;
+  text-align: center;
+  left: calc(50% - 40px);
+}
+
+body {
+  background-color: hsl(185, 41%, 84%);
+}
+
+.App {
+  height: 450px;
+  width: 900px;
+  background-color: white;
+  border-radius: 20px;
+  margin: 300px auto;
+  padding: 20px 30px;
+  display: grid;
+  grid-template-columns: calc(50% - 20px) calc(50% - 20px);
+  column-gap: 40px;
+}
+
+input:hover,
+button:hover {
+  cursor: pointer;
+}
+
+form {
+  display: grid;
+  grid-template-rows: 30% 45% 25%;
+}
+
+form fieldset {
+  border: none;
+}
+
+form .bill,
+form .num-of-people {
+  position: relative;
+}
+
+form .bill input,
+form .tip-percent input,
+form .num-of-people input {
+  border: none;
+  background-color: hsl(189, 41%, 97%);
+}
+
+form .bill input,
+form .num-of-people input {
+  width: 100%;
+  margin: 10px 0 10px 0px;
+  height: 50px;
+  font-size: 24px;
+  padding: 20px;
+  text-align: right;
+  font-weight: 700;
+  border-radius: 5px;
+}
+
+form .bill img,
+form .num-of-people img {
+  position: absolute;
+  top: 25px;
+  left: 18px;
+}
+
+form .bill input:focus,
+form .tip-percent input:focus,
+form .num-of-people input:focus,
+form .bill input:hover,
+form .tip-percent input:hover,
+form .num-of-people input:hover {
+  outline: 2px solid #72a69a;
+}
+
+form legend {
+  color: gray;
+  font-weight: 700;
+}
+
+form .tip-percent div {
+  display: grid;
+  width: 100%;
+  grid-template-columns: calc(33% - 10px) calc(33% - 10px) calc(33% - 10px);
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 15px;
+  padding: 10px 0px 10px 0px;
+}
+
+form .tip-percent .btn {
+  border: none;
+  background: hsl(183, 100%, 15%);
+  color: white;
+  font-weight: 900;
+  font-size: 15px;
+}
+
+form .tip-percent div button,
+form .tip-percent div input {
+  height: 50px;
+  border-radius: 5px;
+}
+
+form .tip-percent div input {
+  font-size: 24px;
+  padding: 15px;
+  text-align: right;
+  font-weight: 700;
+}
+
+form .tip-percent div button:hover {
+  background-color: #9fe8df;
+  color: hsl(183, 100%, 15%);
+}
+
+.output {
+  padding: 30px;
+  background: hsl(183, 100%, 15%);
+  color: white;
+  border-radius: 15px;
+  position: relative;
+}
+
+.output div {
+  margin: 10px 0px 50px 0px;
+}
+
+.output div {
+  position: relative;
+}
+
+.output div span {
+  display: inline-block;
+}
+
+.output div span:nth-child(2) {
+  position: absolute;
+  right: 5px;
+}
+
+.output button {
+  width: calc(100% - 60px);
+  height: 50px;
+  border-radius: 10px;
+  position: absolute;
+  bottom: 30px;
+  background-color: hsl(172, 67%, 45%);
+  border: none;
+  color: hsl(183, 100%, 15%);
+  font-weight: 900;
+}
+
+.output button:hover {
+  background-color: hsl(185, 41%, 84%);
+}
+
+.output span h1 {
+  color: hsl(172, 67%, 45%);
+}
+
+.output span p {
+  opacity: 0.5;
+}
+
+form .tip-percent .selected {
+  background-color: hsl(172, 67%, 45%);
+}
+
+form .num-of-people p {
+  position: absolute;
+  right: 0;
+  bottom: 80px;
+  color: red;
+  font-weight: 900;
+}
+
+@media screen and (max-width: 376px) {
+  body {
+    width: 100%;
+    height: 800px;
+  }
+
+  .title {
+    top: 100px;
+  }
+
+  .App {
+    width: 112%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50% 30% 20%;
+    height: 800px;
+    margin: 100px 0 0 0;
+    row-gap: 20px;
+    padding-bottom: 90px;
+    position: relative;
+    top: 100px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+
+  form {
+    width: 100%;
+    height: 500px;
+    grid-template-rows: 20% 45% 20% 10%;
+  }
+
+  form .bill,
+  form .num-of-people {
+    width: 95%;
+  }
+
+  form .tip-percent div {
+    width: 95%;
+    grid-gap: 10px;
+    grid-template-columns: calc(50% - 5px) calc(50% - 5px);
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+
+  .output {
+    width: 95%;
+    height: 300px;
+    position: relative;
+    top: 80px;
+  }
+}
